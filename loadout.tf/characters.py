@@ -27,5 +27,22 @@ character = await characters.selectCharacter(tf2.Demoman)
 template = items.getItemTemplate("47")
 if template:
     item = await character.addItem(template)
-	# Change the paint color
+    # Change the paint color
     item.setPaint(tf2.Paints.PinkAsHell)
+
+
+##################################################
+### Add a weapon
+##################################################
+import characters
+import items
+import tf2
+
+await items.initItems()
+character = await characters.selectCharacter(tf2.Demoman)
+template = items.getItemTemplate(206)  # gl
+if template:
+    item = await character.addItem(template)
+    item.showFestivizer(True)
+    item.critBoost()
+    item.setStatClock(1234) # None to remove the stat clock
