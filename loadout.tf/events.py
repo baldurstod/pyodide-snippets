@@ -12,7 +12,7 @@ kills = 0
 # The handler function
 def tick_handler(event):
     global kills
-    item.setStatClock(kills)
+    item.setKillCount(kills)
     kills += 1
 
 

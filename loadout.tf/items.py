@@ -43,7 +43,7 @@ character = await characters.selectCharacter(tf2.Demoman)
 template = items.getItemTemplate(206)  # gl
 if template:
     item = await character.addItem(template)
-    item.setStatClock(1234)  # item.setStatClock(None) to remove the stat clock
+    item.setKillCount(1234)  # item.setKillCount(None) to remove the stat clock
 
 ##################################################
 ### Add a specialized killstreak
