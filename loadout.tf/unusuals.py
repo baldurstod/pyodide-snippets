@@ -10,9 +10,9 @@ await items.initItems()
 
 character = await characters.selectCharacter(tf2.Demoman)
 # Get the effect template
-[_, template] = items.getEffectTemplateById(9) # green energy
+[_, template] = items.getEffectTemplateById(9)  # green energy
 if template:
-	# Add the effect
+    # Add the effect
     character.addEffect(template)
 
 ##################################################
@@ -27,9 +27,9 @@ await items.initItems()
 
 character = await characters.selectCharacter(tf2.Demoman)
 # Get the effect template
-[_, template] = items.getEffectTemplateById(3005) # Fountain of Delight
+[_, template] = items.getEffectTemplateById(3005)  # Fountain of Delight
 if template:
-	# Add the taunt effect
+    # Add the taunt effect
     character.setTauntEffect(template)
 
 ##################################################
@@ -44,9 +44,9 @@ await items.initItems()
 
 character = await characters.selectCharacter(tf2.Demoman)
 # Get the effect template
-[_, template] = items.getEffectTemplateById(22005) # Flames level 2
+[_, template] = items.getEffectTemplateById(22005)  # Flames level 2
 if template:
-	# Add the killstreak effect
+    # Add the killstreak effect
     character.setKillsteakEffect(template, tf2.KillstreakColor.VillainousViolet)
 
 ##################################################
@@ -59,5 +59,7 @@ import tf2
 # Init effects
 await items.initItems()
 
-character = await characters.selectCharacter(tf2.Demoman) # Note: this also works on other classes
+character = await characters.selectCharacter(
+    tf2.Demoman
+)  # Note: this also works on other classes
 character.setDecapitationLevel(4)
