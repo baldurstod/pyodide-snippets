@@ -93,3 +93,17 @@ if character_from:
     character_to = await characters.selectCharacter(character_from.characterClass)
     character_to.setTeam(tf2.Blu)
     character_to.copy(character_from)  # Copy items, effects, ...
+
+##################################################
+### Set pose parameter
+##################################################
+import characters
+import tf2
+
+character = await characters.selectCharacter(tf2.Scout)
+character.setUserAnim("run_primary")
+# Other parameters are: move_y, body_yaw, body_pitch, r_arm, r_hand_grip
+character.setPoseParameter("move_x", 1)
+template = items.getItemTemplate(200)
+if template:
+    item = await character.addItem(template)
