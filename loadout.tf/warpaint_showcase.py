@@ -5,6 +5,8 @@ import items
 import characters
 import tf2
 import math
+import entities
+import loadout
 
 await items.initItems()
 
@@ -187,7 +189,7 @@ async def setup_weapons(character_id):
             item = await character.addItem(template)
             model = await item.getModel()
 
-            item.setWarpaint(303, 0, 0)
+            item.setWarpaint(303, 4, 123456)
 
             if model:
                 model.setPosition(pos["position"])
@@ -199,3 +201,10 @@ async def setup_weapons(character_id):
 
 await setup_weapons(0)
 await setup_weapons(1)
+
+entities.Text3D.new(
+    {"text": "Offside", "parent": loadout.scene, "position": [-140, 0, 125], "size": 20}
+)
+entities.Text3D.new(
+    {"text": "Playside", "parent": loadout.scene, "position": [55, 0, 125], "size": 20}
+)
