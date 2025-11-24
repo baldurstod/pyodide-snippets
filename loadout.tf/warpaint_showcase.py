@@ -28,11 +28,11 @@ weapons = {
     },
     194: {  # knife
         "position": [-95, 0, -24],
-        "orientation": [0, 0, 0, 1],
+        "orientation": [0, 0, 1, 0],
     },
     197: {  # wrench
         "position": [-92, 0, 18],
-        "orientation": [0, 0, 0, 1],
+        "orientation": [0, 0, 1, 0],
     },
     199: {  # shotgun
         "position": [-75, 0, 109],
@@ -83,8 +83,8 @@ weapons = {
         "orientation": [0, 0, 0, 1],
     },
     214: {  # powerjack
-        "position": [87, 0, -24],
-        "orientation": [0, 0, 0, 1],
+        "position": [90, 0, -24],
+        "orientation": [0, 0, 1, 0],
     },
     215: {  # degreaser
         "position": [-89, 0, -8],
@@ -95,8 +95,8 @@ weapons = {
         "orientation": [0, 0, 0, 1],
     },
     221: {  # holy mackerel
-        "position": [-104, 0, 18],
-        "orientation": [0, 0, 0, 1],
+        "position": [-107, 0, 18],
+        "orientation": [0, 0, 0.4, -0.9],
     },
     228: {  # black box
         "position": [6, 0, -15],
@@ -120,15 +120,15 @@ weapons = {
     },
     326: {  # back scratcher
         "position": [-80, 0, 40],
-        "orientation": [0, 0, 1, 1],
+        "orientation": [0, 0, -1, 1],
     },
     327: {  # Claidheamohmor
         "position": [41, 0, 14],
         "orientation": [0, 0, 1, 1],
     },
     329: {  # jag
-        "position": [-120, 0, 18],
-        "orientation": [0, 0, 0, 1],
+        "position": [-117, 0, 18],
+        "orientation": [0, 0, 1, 0],
     },
     351: {  # detonator
         "position": [-60, 0, 60],
@@ -136,15 +136,15 @@ weapons = {
     },
     401: {  # Shahanshah
         "position": [-115, 0, -33],
-        "orientation": [0, -1, 0, 1],
+        "orientation": [1, 0, 1, 0],
     },
     402: {  # bazaar bargain
         "position": [-24, 0, 93],
         "orientation": [0, 0, 0, 1],
     },
     404: {  # persian persuader
-        "position": [-68, 0, 17],
-        "orientation": [0, 0, -1, 1],
+        "position": [-66, 0, 15],
+        "orientation": [0, 0, -1, -1],
     },
     415: {  # reserve shooter
         "position": [-113, 0, -50],
@@ -160,7 +160,7 @@ weapons = {
     },
     447: {  # disciplinary action
         "position": [30, 0, 4],
-        "orientation": [0, 0, 0, 1],
+        "orientation": [0, 0, -0.93, 0.36],
     },
     448: {  # soda popper
         "position": [-63, 0, -29],
@@ -229,6 +229,7 @@ async def setup_weapons(character_id):
 
                 if character_id == 1 and not pos.get("rotate_z", True) == False:
                     model.rotateGlobalZ(math.pi)
+
 
 await setup_weapons(0)
 await setup_weapons(1)
