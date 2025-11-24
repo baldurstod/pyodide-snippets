@@ -51,27 +51,11 @@ await source1.createParticleSystem("tf2", "flamethrower_halloween", muzzle)
 ##################################################
 ### Generate thumbnails
 ##################################################
-import characters
-import items
 import tf2
 import engine
-import loadout
 import entities
 import time
 import source1
-
-camera = entities.Camera.new(  # Create a camera
-    {
-        "position": [0, 200, 50],
-        "parent": loadout.scene,
-        "verticalFov": 10,
-        "autoResize": True,
-    }
-)
-
-# Create a control for the camera
-orbitControl = entities.OrbitControl.new(camera)
-orbitControl.target.setPosition([0, 0, 10])
 
 # Create a scene to render the thumbnails
 scene = entities.Scene.new(
@@ -81,7 +65,19 @@ scene = entities.Scene.new(
         )
     }
 )
-# scene.background = entities.ColorBackground.new({"color": [0x21 / 255, 0x25 / 255, 0x2B / 255, 1]})
+
+camera = entities.Camera.new(  # Create a camera
+    {
+        "position": [0, 200, 50],
+        "parent": scene,
+        "verticalFov": 10,
+        "autoResize": True,
+    }
+)
+
+# Create a control for the camera
+orbitControl = entities.OrbitControl.new(camera)
+orbitControl.target.setPosition([0, 0, 10])
 
 # Remove the canvas if already existing
 engine.Graphics.removeCanvas("thumbnails")
@@ -111,6 +107,8 @@ canvas = engine.Graphics.addCanvas(
     }
 )
 
+# Create a new particle system
 await source1.createParticleSystem("tf2", "superrare_greenenergy", scene)
 time.sleep(2)
+# Export the canvas as png
 engine.Graphics.exportCanvas("thumbnails", "superrare_greenenergy.png")
