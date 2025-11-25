@@ -24,7 +24,7 @@ weapons = {
         "position": [53, 0, 9],
     },
     172: {  # Scotsman's Skullcutter
-        "position": [25, 0, 10],
+        "position": [24, 0, 10],
         "orientation": [0, 0, 1, 1],
     },
     194: {  # knife
@@ -105,7 +105,7 @@ weapons = {
         "orientation": [0, 0, -1, 1],
     },
     327: {  # Claidheamohmor
-        "position": [41, 0, 14],
+        "position": [42, 0, 14],
         "orientation": [0, 0, 1, 1],
     },
     329: {  # jag
@@ -136,8 +136,8 @@ weapons = {
         "position": [43, 0, 104],
     },
     447: {  # disciplinary action
-        "position": [30, 0, 4],
-        "orientation": [0, 0, -0.93, 0.36],
+        "position": [31, 0, 4],
+        "orientation": [0, 0, -0.36, -0.93],
     },
     448: {  # soda popper
         "position": [-63, 0, -29],
