@@ -107,3 +107,12 @@ character.setPoseParameter("move_x", 1)
 template = items.getItemTemplate(200)
 if template:
     item = await character.addItem(template)
+
+##################################################
+### Set facial animations
+##################################################
+import characters
+import tf2
+
+character = await characters.selectCharacter(tf2.Scout)
+character.setFlexControllerValue('happybig', 1)
