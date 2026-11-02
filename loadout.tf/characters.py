@@ -99,6 +99,10 @@ if character_from:
 ##################################################
 import characters
 import tf2
+import items
+
+# Init items. If items are already loaded, does nothing
+await items.initItems()
 
 character = await characters.selectCharacter(tf2.Scout)
 character.setUserAnim("run_primary")
