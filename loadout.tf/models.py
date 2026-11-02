@@ -10,7 +10,7 @@ sentry = await source1.createModel(
 )
 if sentry:
     sentry.playSequence("idle_off")
-    sentry.setSkin(1)
+    sentry.setSkinId(1)
     telescope_bone = sentry.getBoneByName("upper_telescope_01")
     if telescope_bone:
         telescope_bone.rotateY(10)
@@ -39,7 +39,7 @@ sentry = await source1.createModel(
 )
 if sentry:
     sentry.playSequence("idle_off")
-    sentry.setSkin(1)
+    sentry.setSkinId(1)
     telescope_bone = sentry.getBoneByName("upper_telescope_01")
     if telescope_bone:
         engine.GraphicsEvents.addEventListener(
